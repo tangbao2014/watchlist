@@ -10,7 +10,7 @@ WIN = sys.platform.startswith('win')
 if WIN:
     prefix = 'sqlite:///'
 else:
-prefix = 'sqlite:////'
+    prefix = 'sqlite:////'
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY','DEV')
